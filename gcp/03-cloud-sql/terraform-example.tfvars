@@ -1,0 +1,5 @@
+project = ""
+zone = ""
+region = ""
+network_region = ""
+password = ""

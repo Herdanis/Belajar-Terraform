@@ -1,0 +1,4 @@
+project = ""
+zone = ""
+region = ""
+location = ""
