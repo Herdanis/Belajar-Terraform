@@ -2,14 +2,15 @@
 apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
-  name: letsencrypt-staging
+  name: letsencrypt
 spec:
   acme:
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     email: herdanis.pradana@gmail.com
     privateKeySecretRef:
-      name: letsencrypt-staging
+      name: letsencrypt
     solvers:
       - http01:
           ingress:
             name: web-ingress
+            # class: nginx

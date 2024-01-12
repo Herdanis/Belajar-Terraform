@@ -49,16 +49,6 @@ resource "google_sql_database_instance" "read_replica" {
   settings {
     tier = var.tier
     deletion_protection_enabled = false
-    backup_configuration {
-      binary_log_enabled = true
-      enabled = true
-      start_time = var.backup-start
-      transaction_log_retention_days = var.retention
-      backup_retention_settings {
-        retained_backups = var.retention
-        retention_unit = "COUNT"
-      }
-    }
     ip_configuration {
       authorized_networks {
         name = "public"
